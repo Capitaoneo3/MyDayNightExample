@@ -24,7 +24,8 @@ public class MainActivity extends AppCompatActivity {
         switchCompat = findViewById(R.id.switchCompat);
 
         sharedPreferences = getSharedPreferences("night",0);
-        Boolean booleanValue = sharedPreferences.getBoolean("night_mode",true);
+        Boolean booleanValue = sharedPreferences.getBoolean("night_mode",false);
+
         if (booleanValue){
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
             switchCompat.setChecked(true);
